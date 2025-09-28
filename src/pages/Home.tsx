@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Home() {
   return (
     <div className="space-y-6">
@@ -17,10 +19,10 @@ export default function Home() {
 
 function QuickCard({ title, href }: { title: string; href: string }) {
   return (
-    <a href={href} className="rounded-xl bg-white shadow-sm p-5 hover:shadow-md transition-shadow border border-slate-100">
+    <Link to={href} className="rounded-xl bg-white shadow-sm p-5 hover:shadow-md transition-shadow border border-slate-100">
       <div className="text-slate-700 font-medium">{title}</div>
       <div className="text-slate-500 text-sm mt-1">Open {title} generator</div>
-    </a>
+    </Link>
   )
 }
 
