@@ -11,7 +11,7 @@ export default function Services() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    const form = e.currentTarget as HTMLFormElement
+    const form = e.currentTarget //as HTMLFormElement
     const data = new FormData(form)
     data.set('use_case', 'services')
 
